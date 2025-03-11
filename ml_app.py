@@ -122,7 +122,7 @@ def main():
     # Sidebar for Training
     st.sidebar.header("Model Training")
     train_model = st.sidebar.button("Train Model")
-    dataset_path = st.sidebar.text_input("Dataset Path", "/kaggle/input/co2-emission-by-vehicles/CO2 Emissions_Canada.csv")
+    dataset_path = st.sidebar.text_input("/input/CO2 Emissions_Canada.csv")
     model_path = "optimized_model.pkl"
 
     # Define dataset parameters
