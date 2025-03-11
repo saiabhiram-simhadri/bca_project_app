@@ -122,7 +122,7 @@ def main():
     # Sidebar for Training
     st.sidebar.header("Model Training")
     train_model = st.sidebar.button("Train Model")
-    dataset_path = st.sidebar.text_input("Dataset Path", "./input/CO2 Emissions_Canada.csv")
+    dataset_path = st.sidebar.text_input("Dataset Path", "./input/co2_emissions.csv")
     model_path = "pretrained_model.pkl"
 
     # Define dataset parameters
