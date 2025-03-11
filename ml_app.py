@@ -122,8 +122,8 @@ def main():
     # Sidebar for Training
     st.sidebar.header("Model Training")
     train_model = st.sidebar.button("Train Model")
-    dataset_path = st.sidebar.text_input("/input/CO2 Emissions_Canada.csv")
-    model_path = "optimized_model.pkl"
+    dataset_path = st.sidebar.text_input("Dataset Path", "./input/CO2 Emissions_Canada.csv")
+    model_path = "pretrained_model.pkl"
 
     # Define dataset parameters
     categorical_cols = ['Make', 'Model', 'Vehicle Class', 'Transmission', 'Fuel Type']
@@ -146,6 +146,7 @@ def main():
 
     # Train model if requested
     if train_model:
+        model_path = "local_model.pkl"
         with st.spinner("Training model... This may take a few minutes."):
             loader = DataLoader(dataset_path)
             data = loader.load_data()
